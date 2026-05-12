@@ -1,7 +1,7 @@
 import Developer from "../assets/meet-the-developer.png";
 import workspace from "../assets/Workspace.png";
 
-const About = () => {
+const About = ({ aboutRef }) => {
   return (
     <div className="min-h-screen">
       {/* Background / Workspace Section */}
@@ -14,7 +14,7 @@ const About = () => {
       </section>
 
       {/* About Section */}
-      <div className="hero">
+      <div ref={aboutRef} className="hero">
         <div className="hero-content flex-col lg:flex-row gap-10">
           <img
             src={Developer}

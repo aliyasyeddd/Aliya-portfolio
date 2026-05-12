@@ -1,6 +1,6 @@
-const Navbar = () => {
+const Navbar = ({ aboutRef }) => {
   return (
-    <div className="flex items-start justify-between px-10 mt-10">
+    <div className=" sticky flex items-start justify-between px-10 mt-10">
       <h1 className="text-3xl">
         Aliya's <i class="fa-solid fa-code"></i> <br /> Portfolio
       </h1>
@@ -8,22 +8,38 @@ const Navbar = () => {
       <div className="tabs tabs-lift">
         <label className="tab text-2xl mr-4">
           <input type="radio" name="my_tabs_4" />
-          About
+          <div
+            className="lg:tooltip"
+            data-tip="About Me"
+            onClick={() =>
+              aboutRef.current?.scrollIntoView({
+                behavior: "smooth",
+              })
+            }
+          >
+            <i class="fa-regular fa-user"></i>
+          </div>
         </label>
 
         <label className="tab text-2xl mr-4">
           <input type="radio" name="my_tabs_4" />
-          Skills
+          <div className="lg:tooltip" data-tip="Skills">
+            <i class="fa-brands fa-codepen"></i>
+          </div>
         </label>
 
         <label className="tab text-2xl mr-4">
           <input type="radio" name="my_tabs_4" />
-          Projects
+          <div className="lg:tooltip" data-tip="Projects">
+            <i class="fa-solid fa-diagram-project"></i>
+          </div>
         </label>
 
         <label className="tab text-2xl mr-4">
           <input type="radio" name="my_tabs_4" />
-          Contact
+          <div className="lg:tooltip" data-tip="Contact">
+            <i class="fa-sharp fa-solid fa-at"></i>
+          </div>
         </label>
       </div>
     </div>
