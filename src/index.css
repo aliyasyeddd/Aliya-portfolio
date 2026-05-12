@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: all;
+}
+
+@font-face {
+  font-family: 'MochiGreen';
+  src: url('./assets/fonts/MochiGreen-wop06.otf') format('truetype');
+}
+
+body {
+  font-family: 'MochiGreen', serif;
+}
