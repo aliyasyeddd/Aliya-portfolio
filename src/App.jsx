@@ -6,12 +6,12 @@ import './index.css'
 
 function App() {
   const aboutRef = useRef(null);
-
+  const skillsRef = useRef(null);
   return (
     <>
-      <Navbar aboutRef={aboutRef} />
+      <Navbar aboutRef={aboutRef} skillsRef={skillsRef} />
       <About aboutRef={aboutRef} />
-      <Skills />
+      <Skills skillsRef={skillsRef} />
     </>
   )
 }

@@ -1,4 +1,4 @@
-const Navbar = ({ aboutRef }) => {
+const Navbar = ({ aboutRef , skillsRef }) => {
   return (
     <div className=" sticky flex items-start justify-between px-10 mt-10">
       <h1 className="text-3xl">
@@ -23,7 +23,14 @@ const Navbar = ({ aboutRef }) => {
 
         <label className="tab text-2xl mr-4">
           <input type="radio" name="my_tabs_4" />
-          <div className="lg:tooltip" data-tip="Skills">
+          <div className="lg:tooltip"
+           data-tip="Skills"
+              onClick={() =>
+                skillsRef.current?.scrollIntoView({
+                  behavior: "smooth",
+                })
+              }
+           >
             <i class="fa-brands fa-codepen"></i>
           </div>
         </label>
